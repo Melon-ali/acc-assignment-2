@@ -6,7 +6,7 @@ const createTour = async (req, res, next) => {
     const tour = new Tours(data);
     const result = await tour.save();
     if (!result._id) {
-      return res.status(500).json({ success: false, error: "internal error" });
+      return res.status(500).json({ success: false, error: "Internal Error" });
     }
 
     res.status(201).json({ success: true, message: "Tour Created" });

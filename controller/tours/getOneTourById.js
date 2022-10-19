@@ -10,12 +10,12 @@ const getOneTourById = async (req, res, next) => {
       { $inc: { viewCount: 1 } }
     );
     if (!result || !isValidObjectId(id) || !incViewCount.acknowledged) {
-      return res.status(400).json({ success: false, message: "no data found" });
+      return res.status(400).json({ success: false, message: "No Data Found" });
     }
 
     res
       .status(200)
-      .json({ success: true, message: "get tour by id", data: result });
+      .json({ success: true, message: "Get Tour By Id", data: result });
   } catch (error) {
     next(error);
   }

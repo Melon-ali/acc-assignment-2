@@ -12,11 +12,11 @@ const getAllTours = async (req, res, next) => {
       .limit(+limit)
       .sort(sort);
     if (!tours) {
-      res.status(400).json({ success: false, message: "something is wrong" });
+      res.status(400).json({ success: false, message: "Something Is Wrong" });
     }
     res
       .status(200)
-      .json({ success: true, message: "get all tours", data: tours });
+      .json({ success: true, message: "Get All Tours", data: tours });
   } catch (error) {
     next(error);
   }

@@ -15,9 +15,9 @@ const updateById = async (req, res, next) => {
     if (!result.acknowledged || !isValidObjectId(id)) {
       return res
         .status(400)
-        .json({ success: false, message: "no data updated" });
+        .json({ success: false, message: "No Data Updated" });
     }
-    res.status(200).json({ success: true, message: "tour updated" });
+    res.status(200).json({ success: true, message: "Tour Updated" });
   } catch (error) {
     next(error);
   }
